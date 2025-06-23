@@ -1,0 +1,5 @@
+- manifest.json - Extension configuration
+- content.js - Main tracking logic
+- styles.css - Navigation panel styling
+- popup.html/js - Extension popup interface
+- background.js - Background service worker

@@ -1,0 +1,135 @@
+#chat-navigator-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.nav-header {
+  background: #f8f9fa;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.nav-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.nav-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+.nav-btn:hover {
+  background: #0056b3;
+}
+
+.nav-content {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.nav-controls {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  gap: 8px;
+}
+
+.nav-entries {
+  padding: 8px;
+}
+
+.nav-entry {
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-left: 3px solid #007bff;
+}
+
+.nav-entry:hover {
+  background: #e9ecef;
+  transform: translateX(2px);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.entry-number {
+  font-weight: 600;
+  color: #007bff;
+  font-size: 12px;
+}
+
+.entry-time {
+  font-size: 11px;
+  color: #6c757d;
+}
+
+.entry-prompt {
+  color: #333;
+  font-size: 13px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  #chat-navigator-panel {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  .nav-header {
+    background: #1a202c;
+    border-color: #4a5568;
+  }
+  
+  .nav-header h3 {
+    color: #e2e8f0;
+  }
+  
+  .nav-entry {
+    background: #1a202c;
+    color: #e2e8f0;
+  }
+  
+  .nav-entry:hover {
+    background: #2d3748;
+  }
+  
+  .entry-prompt {
+    color: #cbd5e0;
+  }
+}
